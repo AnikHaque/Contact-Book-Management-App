@@ -27,3 +27,11 @@ def search_contacts(self, term):
                 term in contact['phone']):
                 result.append(contact)
         return result
+
+
+def remove_contact(self, phone):
+        for i, contact in enumerate(self.contacts):
+            if contact['phone'] == phone:
+                del self.contacts[i]
+                return True
+        return False
